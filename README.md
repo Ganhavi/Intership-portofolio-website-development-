@@ -33,29 +33,6 @@ Step 06: I have PHP file which is linked with HTML file.
 •	PHP is a powerful tool for making dynamic and interactive web pages.
 •	In my php file I have a code for session start and error reporting. It is having query to sql for storing the database in email.
  
-Code for PHP: [File name: cont.php]
-<?php
-session_start();
-error_reporting(0);
-include('includes/conta.php');
-if(isset($_POST['submit']))
-  {
-    
-    $fullname=$_POST['name'];
-    $email=$_POST['email'];
-    $mobilenumber=$_POST['phone'];
-    $enquiry=$_POST['message'];
- 
-
-    $query=mysqli_query($con,"insert into  conta(name,email,phone,message) values('$name','$email','$phone','$message')");
-        if ($query) {
-    $msg="Your enquiry has been sent successfully.";
-  }
-  else
-    {
-      $msg="Something Went Wrong. Please try again";
-    } 
-}
 
 Step 07: For making website viewers to contact me/admin I have created SQL.
 •	SQL (structured query language) is a standard database language.
